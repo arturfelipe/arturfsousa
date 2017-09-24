@@ -1,3 +1,8 @@
 baseURL = "http://arturfsousa.com/"
 languageCode = "en-us"
 title = "Artur Sousa WebSite"
+theme = "aerial"
+
+[params]
+    name = "Artur Sousa"
+    about = "Hugo is great"
