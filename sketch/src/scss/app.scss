@@ -1,5 +1,39 @@
-$background: #7e2727;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100%;
+}
 
 body {
-  background-color: $background;
+  display: grid;
+  background-color: #eee;
+  // grid-template-rows: 1fr 50px;
+  // grid-template-columns: 50px 1fr;
+  grid-template-areas: "content"
+                       "footer";
+}
+
+.sidebar {
+  background-color: orange;
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: content;
+  background-color: green;
+}
+
+.footer {
+  background-color: red;
+  grid-area: footer;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    grid-template-columns: 120px 1fr;
+    grid-template-areas: "sidebar  content"
+                          "footer   footer";
+  }
 }
